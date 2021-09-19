@@ -1,0 +1,66 @@
+<!-- Common -->
+<!ENTITY iyt-notifier.name "ItsYourTurn Notifier">
+<!ENTITY iyt-notifier.version "V.2011.12.30.1331 by">
+
+<!-- Context Menu -->
+
+<!ENTITY iyt-notifier-context-menu-about.label "About">
+<!ENTITY iyt-notifier-context-menu-about.accesskey "A">
+
+<!ENTITY iyt-notifier-context-menu-checknow.label "Check ItsYourTurn">
+<!ENTITY iyt-notifier-context-menu-checknow.accesskey "C">
+
+<!ENTITY iyt-notifier-context-menu-prefs.label "Options">
+<!ENTITY iyt-notifier-context-menu-prefs.accesskey "O">
+
+<!-- Tooltip -->
+<!ENTITY iyt-notifier-tooltip-login.label "Please login">
+<!ENTITY iyt-notifier-tooltip-logged-in-as.label "Logged in as ">
+
+<!-- Toolbar Button -->
+<!ENTITY iyt-notifier-toolbarbutton.label "ItsYourTurn Notifier">
+<!ENTITY iyt-notifier-toolbarbutton.tooltip "Please login">
+
+<!-- Prefs Menu -->
+<!ENTITY iyt-notifier.lblPreferences "Options">
+<!ENTITY iyt-notifier.lblSoundNotification "Sound Notification">
+<!ENTITY iyt-notifier.lblShowNotification "Notify when you have new turns">
+
+<!ENTITY iyt-notifier.lblNotify.label "Show Notification">
+<!ENTITY iyt-notifier.lblNotify.accesskey "N">
+
+<!ENTITY iyt-notifier.lblSoundBeep.label "Ding">
+<!ENTITY iyt-notifier.lblSoundBeep.accesskey "D">
+
+<!ENTITY iyt-notifier.lblSoundList.label "List">
+<!ENTITY iyt-notifier.lblSoundList.accesskey "L">
+
+<!ENTITY iyt-notifier.lblSoundFile.label "File">
+<!ENTITY iyt-notifier.lblSoundFile.accesskey "F">
+
+<!ENTITY iyt-notifier.btnBrowse.label "Browse ...">
+<!ENTITY iyt-notifier.btnBrowse.accesskey "R">
+
+<!ENTITY iyt-notifier.lblSoundOff.label "Off">
+<!ENTITY iyt-notifier.lblSoundOff.accesskey "O">
+
+<!ENTITY iyt-notifier.btnNotifyTest.label "Test">
+<!ENTITY iyt-notifier.btnNotifyTest.accesskey "T">
+<!ENTITY iyt-notifier.btnNotifyTest.tooltiptext "Test selected options">
+
+<!ENTITY iyt-notifier.btnListSources.label "List Source">
+<!ENTITY iyt-notifier.btnListSources.accesskey "S">
+
+<!ENTITY iyt-notifier.btnReset.label "Default">
+<!ENTITY iyt-notifier.btnReset.accesskey "D">
+
+<!-- About Window -->
+<!ENTITY iyt-notifier.lblAbout "About">
+<!ENTITY iyt-notifier.lblVersion "Version">
+<!ENTITY iyt-notifier.lblDescription1 "A toolbar and statusbar notifier which checks">
+<!ENTITY iyt-notifier.lblDescription2 "and returns your game status.">
+<!ENTITY iyt-notifier.lblVisitHomepage "Visit add-on website">
+<!ENTITY iyt-notifier.lblDisclaimer1 "DISCLAIMER: This Firefox add-on and it's">
+<!ENTITY iyt-notifier.lblDisclaimer2 "author are not affiliated with">
+<!ENTITY iyt-notifier.lblDisclaimer3 "(except to play games privately :-)">
+<!ENTITY iyt-notifier.lblDisclaimer4 "http://CMP.ly/0">

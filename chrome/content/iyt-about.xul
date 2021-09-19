@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://iyt-notifier/content/iyt-notifier.css" type="text/css"?>
+<!--
+Thanks to the cookiesafe addon for a great example
+-->
+
+<!DOCTYPE dialog SYSTEM "chrome://iyt-notifier/locale/iyt-notifier.dtd">
+
+<dialog title="&iyt-notifier.lblAbout;"
+		id="iyt-notifier-window-about"
+        buttons="accept"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        persist="screenX screenY"
+		>
+
+	<script type="application/x-javascript" src="chrome://iyt-notifier/content/iyt-common.js" />
+
+	<vbox>
+	
+		<hbox>
+			<image src="chrome://iyt-notifier/content/iyt-logo-32-alert.png" height="48" width="48" class="text-link" tooltiptext="&iyt-notifier.lblVisitHomepage;" onclick="window.open(org.mozilla.addons.itsyourturnNotifier.urlMyServer);" />
+			<vbox>
+				<label value="&iyt-notifier.name;" class="dialogHeader" />
+				<hbox>
+					<label value="&iyt-notifier.version;" />
+					<label value="Mr :-)" style="margin:0;" class="text-link" tooltiptext="deExaminer" onclick="window.open('http://www.itsyourturn.com/iyt.dll?userprofile?userid=15200000087539');" />
+				</hbox>
+			</vbox>
+		</hbox>
+
+		<separator/>
+		
+		<label value="&iyt-notifier.lblDescription1;" /> 
+		<hbox>
+			<label value="  " style="margin:0;" />
+			<label value="ItsYourTurn.com" style="margin:0;" class="text-link" tooltiptext="www.itsyourturn.com" onclick="window.open('http://www.itsyourturn.com');" />
+			<label value="&iyt-notifier.lblDescription2;" />
+		</hbox>
+
+		<label value="&iyt-notifier.lblVisitHomepage;" tooltiptext="&iyt-notifier.lblVisitHomepage;" class="text-link" onclick="window.open(org.mozilla.addons.itsyourturnNotifier.urlMyServer);" />
+
+		<separator class="groove" />
+		
+		<label value="&iyt-notifier.lblDisclaimer1;" />
+		<hbox>
+			<label value="&iyt-notifier.lblDisclaimer2;" />
+			<label value="ItsYourTurn.com" style="margin:0;" class="text-link" tooltiptext="www.itsyourturn.com" onclick="window.open('http://www.itsyourturn.com');" />
+		</hbox>
+		<label value="&iyt-notifier.lblDisclaimer3;" />
+		<label value="&iyt-notifier.lblDisclaimer4;" tooltiptext="Standard disclosure" class="text-link" onclick="window.open('http://cmp.ly/0');" />
+
+	</vbox>
+
+</dialog>

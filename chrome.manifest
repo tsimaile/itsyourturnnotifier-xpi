@@ -1,0 +1,7 @@
+# firefox
+overlay chrome://browser/content/browser.xul chrome://iyt-notifier/content/iyt-notifier.xul
+overlay chrome://browser/content/customizeToolbar.xul chrome://iyt-notifier/content/iyt-notifier.xul
+
+# general registration
+content iyt-notifier chrome/content/
+locale iyt-notifier en-US chrome/locale/en-US/

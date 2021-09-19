@@ -1,0 +1,81 @@
+#iyt-notifier-button {
+	display: block;
+	text-align: center;
+	list-style-image: url("chrome://iyt-notifier/content/icons48.png");
+	}
+#iyt-notifier-button > .toolbarbutton-icon {
+	height: 16px;
+	width: 16px;
+	}
+#iyt-notifier-button[status="enabled"] {
+	-moz-image-region: rect(0px, 144px, 48px, 96px);
+	}
+#iyt-notifier-button[status="disabled"] {
+	-moz-image-region: rect(0px, 48px, 48px, 0px);
+	}	
+#iyt-notifier-button[status="error"]  {
+	-moz-image-region: rect(0px, 240px, 48px, 192px);
+	}
+#iyt-notifier-button[status="new"]  {
+	-moz-image-region: rect(0px, 96px, 48px, 48px);
+	}
+#iyt-notifier-button[status="checking"]  {
+	-moz-image-region: rect(0px, 192px, 48px, 144px);
+	}
+  
+#iyt-notifier-statusbar {
+	list-style-image: url("chrome://iyt-notifier/content/iyt-logo-32.png");
+	}
+#iyt-notifier-statusbar > .statusbarpanel-icon {
+	background-color: transparent;
+	height: 16px;
+	width: 16px;
+	}
+#iyt-notifier-statusbar > .statusbarpanel-text {
+	margin: 0px;
+	}
+  
+#iyt-notifier-statusbar[status="enabled"]  > .statusbarpanel-icon {
+	background-color: #C90;
+	}
+#iyt-notifier-statusbar[status="enabled"] > .statusbarpanel-text {
+	margin-left: 4px;
+	margin-right: 2px;
+	}
+#iyt-notifier-statusbar[status="disabled"]  > .statusbarpanel-icon {
+	background-color: transparent;
+	}
+statusbarpanel#iyt-notifier-statusbar[status="error"]  > .statusbarpanel-icon {
+	background-color: #FC3;
+	}
+statusbarpanel#iyt-notifier-statusbar[status="new"]  > .statusbarpanel-icon {
+	background-color: #0C3;
+	}
+statusbarpanel#iyt-notifier-statusbar[status="new"] > .statusbarpanel-text {
+	margin-left: 4px;
+	margin-right: 2px;
+	}
+statusbarpanel#iyt-notifier-statusbar[status="checking"]  > .statusbarpanel-icon {
+	background-color: #C9F;
+	}
+
+.dialogHeader {
+	font-size: 22px;
+	font-family: cambria,georgia;
+	}
+.description {
+	font-style:italic; 
+	}
+.tooltipGame {
+	font-family: monospace;
+	}
+.tooltipTitle {
+	font-weight:bold;
+	margin:2px;
+	}
+.tooltipMmbrChr {
+	font-size:14px;
+	font-weight:bold;
+	color:red;
+	margin:0px;
+	}

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://iyt-notifier/content/iyt-notifier.css" type="text/css"?>
+<!--
+Thanks to the cookiesafe addon for a great example
+-->
+
+<!DOCTYPE prefwindow SYSTEM "chrome://iyt-notifier/locale/iyt-notifier.dtd">
+
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		id="iyt-notifier-window-prefWindow"
+		buttons="accept, cancel"
+		title="&iyt-notifier.lblPreferences;"
+        persist="screenX screenY"
+		ondialogaccept="org.mozilla.addons.itsyourturnNotifier.prefs.onPrefWindowAccept();"
+		>
+		
+<prefpane onpaneload="org.mozilla.addons.itsyourturnNotifier.prefs.startup();">
+
+	<preferences>
+		<preference id="iyt-notifier-prefFirstRun"
+					name="extensions.iyt-notifier.firstrun"
+					type="bool" />
+		<preference id="iyt-notifier-prefNotify"
+					name="extensions.iyt-notifier.notify"
+					type="bool" />
+		<preference id="iyt-notifier-prefSound"
+					name="extensions.iyt-notifier.sound"
+					type="string" />
+		<preference id="iyt-notifier-prefSoundList"
+					name="extensions.iyt-notifier.soundlist"
+					type="string" />
+		<preference id="iyt-notifier-prefSoundFile"
+					name="extensions.iyt-notifier.soundfile"
+					type="string" />
+	</preferences>
+
+	<hbox>
+		<image src="chrome://iyt-notifier/content/iyt-logo-32-alert.png" height="48" width="48" class="text-link" tooltiptext="&iyt-notifier.lblVisitHomepage;" onclick="window.open(org.mozilla.addons.itsyourturnNotifier.urlMyServer);" />
+		<vbox>
+			<label value="&iyt-notifier.name;" class="dialogHeader" />
+			<hbox>
+				<label value="&iyt-notifier.version;" />
+				<label value="Mr :-)" style="margin:0;" class="text-link" tooltiptext="deExaminer" onclick="window.open('http://www.itsyourturn.com/iyt.dll?userprofile?userid=15200000087539');" />
+			</hbox>
+		</vbox>
+	</hbox>
+
+	<separator class="thin" />
+
+	<checkbox id="iyt-notifier-prefs-notify"
+			preference="iyt-notifier-prefNotify"
+			oncommand="org.mozilla.addons.itsyourturnNotifier.prefs.onPrefChange();"
+			label="&iyt-notifier.lblNotify.label;"
+			accesskey="&iyt-notifier.lblNotify.accesskey;" />
+
+	<separator class="thin" />
+
+	<groupbox>
+		<caption label="&iyt-notifier.lblSoundNotification;" />
+		
+		<radiogroup id="iyt-notifier-prefs-sound"
+				oncommand="org.mozilla.addons.itsyourturnNotifier.prefs.onPrefChange();"
+				preference="iyt-notifier-prefSound">
+
+			<radio value="beep" label="&iyt-notifier.lblSoundBeep.label;" accesskey="&iyt-notifier.lblSoundBeep.accesskey;" tooltiptext="http://www.ibiblio.org/pub/multimedia/pc-sounds/ding.wav" />
+
+			<hbox>
+				<radio value="file" label="&iyt-notifier.lblSoundFile.label;" accesskey="&iyt-notifier.lblSoundFile.accesskey;" />
+				<textbox width="240" id="iyt-notifier-prefs-soundfile" preference="iyt-notifier-prefSoundFile" readonly="true" />
+				<button id="iyt-notifier-prefs-soundbrowse" label="&iyt-notifier.btnBrowse.label;" accesskey="&iyt-notifier.btnBrowse.accesskey;" oncommand="org.mozilla.addons.itsyourturnNotifier.prefs.btnPrefsSoundBrowse();" />
+			</hbox>
+
+			<hbox>
+			<tooltip id="iyt-notifier-prefs-soundlistmenuctt">
+				<label id="iyt-notifier-prefs-soundlistmenuttlbl" value=""/>
+			</tooltip>
+			<radio value="list" label="&iyt-notifier.lblSoundList.label;" accesskey="&iyt-notifier.lblSoundList.accesskey;"/>
+				<menulist width="324" id="iyt-notifier-prefs-soundlist" tooltip="iyt-notifier-prefs-soundlistmenuctt" preference="iyt-notifier-prefSoundList">
+					<menupopup id="iyt-notifier-prefs-soundlistmenu" />
+				</menulist>
+			</hbox>
+			<tooltip id="iyt-notifier-prefs-soundlistdesctt">
+				<label id="iyt-notifier-prefs-soundlistdescttlbl" value="" />
+			</tooltip>
+			<hbox>
+				<label width="40" />
+				<label width="324" id="iyt-notifier-prefs-soundlistdesc" tooltip="iyt-notifier-prefs-soundlistdesctt" class="description" value="" crop="right" />
+			</hbox>
+			
+			<radio value="off" label="&iyt-notifier.lblSoundOff.label;" accesskey="&iyt-notifier.lblSoundOff.accesskey;" />
+		</radiogroup>
+	
+	</groupbox>
+
+	<hbox align="right">
+		<button id="iyt-notifier-prefs-notifytest" label="&iyt-notifier.btnNotifyTest.label;" accesskey="&iyt-notifier.btnNotifyTest.accesskey;" tooltiptext="&iyt-notifier.btnNotifyTest.tooltiptext;" oncommand="org.mozilla.addons.itsyourturnNotifier.prefs.testPrefs();" />
+		<button label="&iyt-notifier.btnListSources.label;" accesskey="&iyt-notifier.btnListSources.accesskey;" onclick="window.open(org.mozilla.addons.itsyourturnNotifier.urlMyServer + '/audio/sources.txt');" />
+	</hbox>
+
+	<script type="application/x-javascript" src="chrome://iyt-notifier/content/iyt-common.js" />
+	<script type="application/x-javascript" src="chrome://iyt-notifier/content/iyt-prefs.js" />
+
+</prefpane>
+</prefwindow>
